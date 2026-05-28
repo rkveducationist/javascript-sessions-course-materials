@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA Script</title>
+</head>
+<body>
+    <h1>ECMA Script</h1>
+
+    <button type="button" onclick="checkVariables()">Check Variables</button>
+
+    <script>
+        function checkVariables() {
+            var a = 10;
+            let b = 20;
+            const c = 30;
+
+            // re-assign
+            a = 15;
+            b = 25;
+
+            //c = 35;
+
+            // real-world 
+            const API_URL = "https://jsonplaceholder.typicode.com/users";
+        }
+    </script>
+</body>
+</html>

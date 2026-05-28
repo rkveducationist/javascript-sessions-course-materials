@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1 id="title">Javascript</h1>
+    
+    <button type="button" onclick="changeContent()">click me</button>
+
+    <p id="para" onmouseover="hoverText()" onmouseout="normalText()">Hover over me</p>
+
+    <input class="inputCls" type="text" name="username" value="john1234" placeholder="enter username" onchange="changeValue()" />
+    <script>
+        function changeContent() {
+            document.getElementById("title").innerHTML = "Welcome Students!";
+            document.getElementById("title").style.color = "purple";
+        }
+        
+        function hoverText() {
+            document.getElementById("para").style.backgroundColor = "#fe2"
+        }
+
+        function normalText() {
+            document.getElementById("para").style.backgroundColor = "#fff";
+        }
+
+        function changeValue() {
+            document.getElementsByClassName("inputCls").style.backgroundColor = "red";
+        }
+    </script>
+</body>
+</html>

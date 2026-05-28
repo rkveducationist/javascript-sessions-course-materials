@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Javascript</h1>
+    <!-- 
+        1. forEach
+        2. map
+        3. filter
+    -->
+
+    <button type="button" onclick="runIteration()">Run Iteration</button>
+
+    <p id="output"></p>
+
+    <script>
+        function runIteration() {
+            let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+            let output = "";
+
+            // 1. forEach
+            output += "<b>forEach (print numbers): </b> ";
+            // output = "" +  <b>forEach (print numbers): </b> <br />;
+            numbers.forEach(function(num) {
+                output += num + " ";
+            });
+
+            output += "<br />";
+
+            // 2. map() - create a new array
+            let doubled = numbers.map(function(num) {
+                return num * num;
+            });
+            
+            output += "<b>map (doubled values): </b>";
+            output += doubled.join(" ");
+            output += "<br />";
+
+            // 3. filter() - get even numbers
+            let evenNumbers = numbers.filter(function(num) {
+                return num % 2 == 0;
+            });
+
+            output += "<b>filter (even numbers): </b>";
+            output += evenNumbers.join(" ");
+            output += "<br />";
+
+
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+</body>
+</html>

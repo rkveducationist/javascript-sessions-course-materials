@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Javascript</h1>
+
+    <button type="button" onclick="runObjectIteration()">Show Object Data</button>
+
+    <p id="output"></p>
+
+    <script>
+        function runObjectIteration() {
+            let user = {
+                name: "Ravi",       
+                address: {
+                    city: "Hyderabad", 
+                    pincode: 657456
+                }, 
+                skills: ["HTML", "CSS", "Javascript"]
+            };
+
+            let output = "";
+
+            // access nested object
+            output += "<b>City: </b>" + user.address.city + "<br />";
+            output += "<b>Pincode: </b>" + user.address.pincode + "<br />";
+
+            // 1. for..in loop
+            output += "<b>for..in loop:</b> <br />";
+            for (let key in user) {
+                output += key + ":" + user[key] + "<br />";
+            }
+            output += "<br />";
+
+            // 2. Object.keys() + forEach()
+            output += "<b>forEach loop:</b> <br />";
+            Object.keys(user).forEach(function(key) {
+                output += key + ":" + user[key] + "<br />"
+            })
+            output += "<br />";
+
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+</body>
+</html>

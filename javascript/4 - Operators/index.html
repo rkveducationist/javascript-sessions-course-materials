@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+</head>
+<body>
+    <h1>Javascript</h1>
+
+    <!-- 
+        // Operator
+        1. Arithmatic: +, -, *, /, %
+        2. Assignment: =, +=, -=, *=, /=, %=
+        3. Comparison: <, >, <=, >=, ==, !=, ===, !==
+        4. Logical: &&, ||, !
+        5. Conditional: () ? true : false
+    -->
+
+    <script>
+        let a = 10;
+        let b = 5;
+
+        document.write("The value of a: " + a + "<br />");
+        
+        document.write("The value of b: " + b + "<br />");
+
+        document.write("Addition of a (" + a + ") + b (" + b + ") : " + (a + b) + "<br />");
+
+        document.write(`Multiplication of a: [${a}] * b: [${b}]: (${a * b}) <br />`);
+
+        let num1 = 1.6;
+        let num2 = 4.7;
+
+        document.write("num1: " + num1 + "<br />");
+        document.write("num2: " + num2 + "<br />");
+
+        // num1 = num2;
+
+        // document.write("num1: " + num1 + "<br />");
+        // document.write("num2: " + num2 + "<br />");
+
+        num1 += num2; // num1 = num1 + num2
+        document.write("num1: " + num1 + "<br />");
+
+        let stu_name1 = "joseph";
+        let stu_name2 = "joseph";
+
+        let stu_salary_1 = 50000.00;
+        let stu_salary_2 = 45000.00;
+
+        document.write("stu1 == stu2: " + (stu_name1 == stu_name2) + "<br />");
+        document.write("salary comparison: " + (stu_salary_1 < stu_salary_2) + "<br />");
+
+
+        let a1 = "1";
+        let b1 = 1;
+
+        let res = (a1 === b1);
+        document.write("res: " + res + "<br />");
+
+        res = !((a1 == b1) || (a1 == 1));
+        document.write("res: " + res + "<br />");
+
+
+        res = ((a1 === b1) ? "a1 and b1 are equal" : "a1 and b1 are not eqaual");
+        document.write("res: " + res + "<br />");
+    </script>
+</body>
+</html>

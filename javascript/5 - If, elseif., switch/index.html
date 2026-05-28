@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+</head>
+<body>
+    <h1>Javascript</h1>
+
+    <!-- 
+    
+    Decision Making Statements:
+    1. If
+    2. If Else
+    3. Nested If Else
+    4. Switch.. case
+    -->
+
+    <script>
+        let age = 13;
+
+        if (age > 18) {
+            document.write("You are eligible to vote! <br />");
+        } else {
+            document.write("You are not eligible to vote! because your age is: " + age + "<br />");
+        }
+
+
+        let marks = 75;
+
+        // if (marks >= 90) {
+        //     document.write("Grade A <br />");
+        // } else if (marks >= 70) {
+        //     document.write("Grade B <br />");
+        // } else if (marks >= 50) {
+        //     document.write("Grade C <br />");
+        // } else {
+        //     document.write("Fail <br />");
+        // }
+
+        let username = 1;
+        switch (username) {
+            case 2:
+                document.write("User " + username + " logged in <br />");
+                break;
+
+            case 1:
+                document.write("User " + username + " logged in <br />");
+                break
+
+            case 3:
+                document.write("User " + username + " logged in <br />");
+                break;
+
+            default:
+                document.write("No user loggedin <br />");
+        }
+    </script>
+</body>
+</html>

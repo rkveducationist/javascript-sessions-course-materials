@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Javascript</h1>
+    
+    <button type="button" onclick="runMethods()">run methods</button>
+    
+    <p id="output"></p>
+
+    <script>
+        // shift(), unshift(), splice(), slice()
+        function runMethods() {
+            let numbers = [10, 20, 30, 40, 50];
+
+            // 1. shift()
+            let removeFirst = numbers.shift();
+            // [20, 30, 40, 50]
+
+            // 2. unshift()
+            numbers.unshift(5);
+            // [5, 20, 30, 40, 50]
+
+            // 3. splice() - remove
+            let removedItems = numbers.splice(2, 2);
+            // [30, 40]
+            // [5, 20, 50]
+        
+            // splice() - add
+            numbers.splice(2, 0, 25, 35);
+            // [5, 20, 25, 35, 50]
+
+            // 4. extract portion
+            let slicedArray = numbers.slice(1, 4);
+
+            document.getElementById("output").innerHTML = `
+                Removed First Item (shift): ${removeFirst} <br />
+
+                Array after unshift(5): ${numbers} <br />
+
+                Removed using splice: ${removedItems} <br />
+
+                Array after splice add: ${numbers} <br />
+
+                slice(1, 4): ${slicedArray}
+            `;
+        }
+        
+    </script>
+</body>
+</html>

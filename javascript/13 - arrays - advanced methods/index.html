@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Javascript</h1>
+    <!-- 
+        1. some
+        2. every
+        3. find
+    -->
+
+    <button type="button" onclick="runAdvanced()">Run Advanced</button>
+
+    <p id="output"></p>
+
+    <script>
+        function runAdvanced() {
+            let numbers = [10, 20, 30, 40, 50];
+
+            let output = "";
+
+            // 1. some() - check if any number > 40
+            let hasGreaterThan40 = numbers.some(function(num) {
+                return num > 40;
+            });
+
+            output += "<b>some (any > 40): </b>" + hasGreaterThan40 + "<br />";
+
+            // 2. every() - checks if all numbers > 5
+            let allGreaterThan5 = numbers.every(function(num) {
+                return num > 25;
+            });
+
+            output += "<b>every (all > 25): </b>" + allGreaterThan5 + "<br />";
+
+            // 3. find() - get first number > 25
+            let firstGreaterThan25 = numbers.find(function(num) {
+                return num > 25;
+            });
+
+            output += "<b>find (first > 25): </b>" + firstGreaterThan25 + "<br />";
+
+            document.getElementById("output").innerHTML = output;
+
+        }
+
+    </script>
+</body>
+</html>

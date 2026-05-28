@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1 id="title">Welcome to Javascript DOM</h1>
+
+    <p class="desc">We are discussing about DOM</p>
+    <p class="desc">Its an Advanced Level - Accessing and Manipulating Data</p>
+
+    <button type="button" onclick="changeContent()">Change Content</button>
+
+
+    <script>
+        function changeContent() {
+            let output = "";
+
+            // 1. getElementById
+            let title = document.getElementById("title");
+            title.innerHTML = "DOM Manipulation Started!";
+
+            output += "<b>Id Selector: </b> Changed Title: <br />";
+
+            // 2. getElementsByClassName
+            let paragraphs = document.getElementsByClassName("desc");
+
+            paragraphs[0].innerHTML = "Updated Content of First Para!";
+            paragraphs[1].innerHTML = "Updated Content of Second Para!";
+
+            output += "<b>Class Selector: </b> Updated Paragraphs <br />";
+
+            // 3. querySelector
+            let firstPara = document.querySelector(".desc");
+            firstPara.style.color = "blue";
+
+            output += "<b>querySelector: </b> First Paragraph turned to Blue color <br />";
+
+
+            // 4. querySelectorAll
+            let allParas = document.querySelectorAll(".desc");
+
+            allParas.forEach(function (p) {
+                p.style.fontSize = "20px";
+            });
+
+            output += "<b>querySelectorAll: </b> All Paragraphs Resized!";
+
+
+            document.body.innerHTML += output;
+        }    
+    </script>
+</body>
+</html>

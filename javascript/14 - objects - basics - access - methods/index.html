@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Javascript</h1>
+
+    <button type="button" onclick="runObject()">Show Object Data</button>
+
+    <p id="output"></p>
+
+    <script>
+
+        function runObject() {
+            // object declaration
+            let student = {
+                // properties
+                name: "john", 
+                age: 22, 
+                course: "Javascript", 
+
+                // method
+                greet: function() {
+                    return "Hello, my name is: " + this.name;
+                }
+            };
+
+            let output = "";
+
+            // accessing using the .(dot) notation
+            output += "<b>Name: </b>" + student.name + "<br />";
+
+            // accessing using the [](square bracket) notation
+            output += "<b>Age: </b>" + student["age"] + "<br />";
+
+            // add new property
+            student.city = "Bangalore";
+
+            // update property
+            student.age = 25;
+
+            // delete property
+            delete student.course;
+
+            // call method
+            let greeting = student.greet();
+
+            output += "<b>City (added)</b> : " + student.city + " <br />";
+            output += "<b>Age (updated)</b> : " + student.age + " <br />";
+            output += "<b>Course (deleted)</b> : " + student.course + " <br />";
+            output += "<b>Greeting</b> : " + greeting + " <br />";
+
+
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+</body>
+</html>

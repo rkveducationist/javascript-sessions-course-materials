@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA Script</title>
+</head>
+<body>
+    <h1>ECMA Script</h1>
+
+    <button type="button" onclick="showMessage()">Click Me</button>
+
+    <button type="button" onclick="fullName('sri', 'ram')">Full Name</button>
+
+    <p id="showName"></p>
+
+    <p id="fullName"></p>
+    <script>
+        const showMessage = () => {
+            let name = "Ram";
+
+            document.getElementById("showName").innerHTML = "Hello " + name + "<br />";
+        }
+
+        const fullName = (firstName, lastName) => {
+            let fullName = firstName + " " + lastName;
+
+            document.getElementById("fullName").innerHTML = "Hello " + fullName + "<br />";
+        }
+    </script>
+</body>
+</html>

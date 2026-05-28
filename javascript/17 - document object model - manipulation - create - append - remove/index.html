@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>DOM Manipulation</h1>
+
+    <input type="text" id="taskInput" placeholder="enter task" />
+    <button type="button" onclick="addTask()">Add Task</button>
+
+    <ul id="taskList"></ul>
+    <script>
+        function addTask() {
+            let input = document.getElementById("taskInput");
+            let taskValue = input.value;
+
+            // validation
+            if (taskValue === "") {
+                alert("Please enter a task!");
+                return;
+            }
+
+            // 1. create new element
+            let li = document.createElement("li");
+
+            // add text to element
+            li.innerText = taskValue;
+
+            // 2. create delete button 
+            let deleteBtn = document.createElement("button");
+            deleteBtn.innerText = "Delete";
+
+            // add click event to delete button
+            deleteBtn.onclick = function () {
+                li.remove();
+            }
+
+            // 3. append button to li
+            li.appendChild(deleteBtn);
+
+            // append li to ul
+            document.getElementById("taskList").appendChild(li);
+
+            // clear input
+            input.value = "";
+        }
+    </script>
+</body>
+
+</html>

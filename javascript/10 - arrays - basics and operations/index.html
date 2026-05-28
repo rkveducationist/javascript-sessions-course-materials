@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Javascript</h1>
+    
+    <button type="button" onclick="showArray()">show array data</button>
+    
+    <p id="output"></p>
+
+    <script>
+        // creating an Array
+        let fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+        // function to display array data
+        function showArray() {
+            // accessing elements
+            let firstFruit = fruits[0];            
+            let secondFruit = fruits[1];
+
+            // array length
+            let totalFruits = fruits.length;
+
+            // adding new item
+            fruits.push("Grapes");
+
+            // removing the item
+            fruits.pop();
+
+            // convert array into string
+            let allFruits = fruits.join(", ");
+
+            // display output
+            document.getElementById("output").innerHTML = `
+                First Fruit: ${firstFruit} <br />
+                Second Fruit: ${secondFruit} <br />
+                Total Fruits: ${totalFruits} <br />
+                All Fruits: ${allFruits}
+            `;
+        }
+    </script>
+</body>
+</html>
